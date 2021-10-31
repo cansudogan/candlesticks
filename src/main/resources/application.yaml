@@ -1,0 +1,22 @@
+server:
+  port: 9000
+
+websocket:
+  quotes-websocket-uri: ws://localhost:8080/quotes
+  instruments-websocket-uri: ws://localhost:8080/instruments
+
+spring:
+  profiles:
+    active: development
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: false
+  h2:
+    console.enabled: true
+
+
